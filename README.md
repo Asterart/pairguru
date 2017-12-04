@@ -1,3 +1,8 @@
+##This is application taken from Netguru with added solutions for task 4, 5 and 6
+##All rights for basic app reserved for @Netguru 
+
+
+
 ## Welcome to Pairguru App!
 Place where we examine our candidates
 
