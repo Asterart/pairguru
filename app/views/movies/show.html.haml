@@ -1,5 +1,20 @@
 %h1= @movie.title
 .jumbotron
-  = @movie.description
+	= @movie.description
+%br
+= render partial: "comments/form"
+%br
+- if @movie.comments.count > 0
+	- if @movie.comments.count == 1
+		%h4
+			There is #{@movie.comments.count} comment.
+	- else
+		There are #{@movie.comments.count} comments.
+
+	= render @movie.comments
+- else
+	%h4
+		There are no comments to #{@movie.title} movie.
+
 - if user_signed_in?
-  %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+	%p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'

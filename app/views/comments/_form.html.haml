@@ -1,0 +1,6 @@
+%h4
+  Add new comment:
+= form_for ([@movie, @movie.comments.new]) do |comment|
+  = comment.text_field :body, placeholder: "Write your comment here.."
+  %p
+  = comment.submit "Add comment", class: "btn btn-primary"

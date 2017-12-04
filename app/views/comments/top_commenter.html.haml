@@ -1,0 +1,11 @@
+%h4 Top commenters this week:
+- @commenters.each do |user|
+	.jumbotron
+		%p 
+			User name:
+			= user.name
+		= user.email
+		%p
+		Numbers of comments: 
+		= user.comments.count
+		%br

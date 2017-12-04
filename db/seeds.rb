@@ -82,3 +82,18 @@ if Movie.count < 100
     )
   end
 end
+
+
+#generate example comments
+15.times do |u|
+  50.times do |m|
+    user = u + 1
+    movie = m
+    text = "This is the comment from user" + "#{user}"
+    Comment.create!(
+      user_id: user,
+      movie_id: movie,
+      body: text
+      )
+  end
+end
